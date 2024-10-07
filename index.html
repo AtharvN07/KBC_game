@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KBC Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            color: #333;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+        }
+        .options input {
+            margin: 5px 0;
+        }
+        .submit-btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>KBC Game - 5 Questions</h1>
+        <form id="quizForm">
+            <div class="question">
+                <p><strong>Question 1:</strong> What is the capital of France?</p>
+                <div class="options">
+                    <input type="radio" name="q1" value="Paris" required> Paris<br>
+                    <input type="radio" name="q1" value="London"> London<br>
+                    <input type="radio" name="q1" value="Berlin"> Berlin<br>
+                    <input type="radio" name="q1" value="Rome"> Rome<br>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 2:</strong> Who wrote 'Macbeth'?</p>
+                <div class="options">
+                    <input type="radio" name="q2" value="Shakespeare" required> William Shakespeare<br>
+                    <input type="radio" name="q2" value="Charles Dickens"> Charles Dickens<br>
+                    <input type="radio" name="q2" value="Mark Twain"> Mark Twain<br>
+                    <input type="radio" name="q2" value="Jane Austen"> Jane Austen<br>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 3:</strong> What is the largest planet in our solar system?</p>
+                <div class="options">
+                    <input type="radio" name="q3" value="Jupiter" required> Jupiter<br>
+                    <input type="radio" name="q3" value="Earth"> Earth<br>
+                    <input type="radio" name="q3" value="Mars"> Mars<br>
+                    <input type="radio" name="q3" value="Venus"> Venus<br>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 4:</strong> Who invented the telephone?</p>
+                <div class="options">
+                    <input type="radio" name="q4" value="Alexander Bell" required> Alexander Graham Bell<br>
+                    <input type="radio" name="q4" value="Thomas Edison"> Thomas Edison<br>
+                    <input type="radio" name="q4" value="Nikola Tesla"> Nikola Tesla<br>
+                    <input type="radio" name="q4" value="Marie Curie"> Marie Curie<br>
+                </div>
+            </div>
+
+            <div class="question">
+                <p><strong>Question 5:</strong> Which is the fastest land animal?</p>
+                <div class="options">
+                    <input type="radio" name="q5" value="Cheetah" required> Cheetah<br>
+                    <input type="radio" name="q5" value="Lion"> Lion<br>
+                    <input type="radio" name="q5" value="Tiger"> Tiger<br>
+                    <input type="radio" name="q5" value="Horse"> Horse<br>
+                </div>
+            </div>
+
+            <button class="submit-btn" type="submit">Submit Answers</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("quizForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            alert("Your answers have been submitted! Good luck!");
+        });
+    </script>
+</body>
+</html>
